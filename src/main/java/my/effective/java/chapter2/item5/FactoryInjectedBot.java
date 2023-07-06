@@ -11,12 +11,15 @@ public class FactoryInjectedBot {
 	public void changeDictionaryByFactory(Language language) {
 		if (language.equals(Language.SPANISH)) {
 			this.dictionary = dictionaryFactory.createSpanishDictionary(); // 얘만 새 인스턴스 만들어줌
+			return;
 		}
 		if (language.equals(Language.KOREAN)) {
 			this.dictionary = dictionaryFactory.getKoreanDictionary(); // 얘는 싱글톤임
+			return;
 		}
 		if (language.equals(Language.ENGLISH)) {
 			this.dictionary = dictionaryFactory.getEnglishDictionary();
+			return;
 		}
 		throw new IllegalArgumentException("지원하지 않는 언어입니다.");
 	}
