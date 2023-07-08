@@ -1,9 +1,9 @@
 package my.effective.java.chapter2.item2;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ProfileBuilderTest {
 
@@ -22,7 +22,7 @@ public class ProfileBuilderTest {
 		Profile profile2 = Profile.builder().name("금춘향").build();
 
 		assertEquals("금춘향", profile2.getName());
-		assertEquals(null, profile2.getHobby());
+		assertNull(profile2.getHobby());
 		assertEquals(0, profile2.getAge());
 	}
 }
