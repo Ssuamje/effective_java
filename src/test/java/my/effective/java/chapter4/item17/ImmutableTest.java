@@ -34,7 +34,7 @@ public class ImmutableTest {
 	@Test
 	void 동반_클래스() {
 		Car car = CarFactory.createCar("maker", "model", 2021);
-		Car car2 = CarFactory.createCar("maker", "model", 2021);
+		Car car2 = new Car("maker", "model", 2021);
 		assertEquals(car, car2);
 	}
 }
