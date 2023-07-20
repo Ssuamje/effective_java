@@ -34,8 +34,8 @@ public class RawGenericTest {
 		Checker<Integer> checker = new IntegerChecker();
 
 		assertThat(checker.isEmpty(integerBox)).isFalse();
-		assertThat(checker.isItemCorrect(integerBox, Integer.class)).isTrue();
-		assertThat(checker.isItemCorrect(stringBox, Integer.class)).isFalse();
+		assertThat(checker.isCoincident(integerBox, Integer.class)).isTrue();
+		assertThat(checker.isCoincident(stringBox, Integer.class)).isFalse();
 		assertThat(checker.isLarge(integerBox.unbox())).isFalse();
 	}
 
