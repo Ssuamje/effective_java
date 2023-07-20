@@ -29,11 +29,14 @@ public class RawGenericTest {
 
 	@Test
 	void 제네릭() {
-		Box<Integer> box = new Box<>(1);
+		Box<Integer> integerBox = new Box<>(1);
+		Box<String> stringBox = new Box<>("hi");
 		Checker<Integer> checker = new IntegerChecker();
 
-		assertThat(checker.isEmpty(box)).isFalse();
-		assertThat(checker.isLarge(box.unbox())).isFalse();
+		assertThat(checker.isEmpty(integerBox)).isFalse();
+		assertThat(checker.isItemCorrect(integerBox, Integer.class)).isTrue();
+		assertThat(checker.isItemCorrect(stringBox, Integer.class)).isFalse();
+		assertThat(checker.isLarge(integerBox.unbox())).isFalse();
 	}
 
 }
