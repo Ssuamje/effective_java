@@ -1,4 +1,4 @@
-package my.effective.java.chapter4.item23;
+package my.effective.java.chapter4.item22;
 
 public class CabinetRental {
 

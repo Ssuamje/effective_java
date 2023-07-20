@@ -1,4 +1,4 @@
-package my.effective.java.chapter4.item22;
+package my.effective.java.chapter4.item21;
 
 public class PalzaWalking implements Walking {
 	@Override
